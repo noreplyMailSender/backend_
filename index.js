@@ -6,7 +6,7 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 app.get("*", (req, res) => {
-  console.log(req.get('Origin'));
+  console.log(req.headers.origin);
   res.send('Request Origin:');
 //  next();
 });
