@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const corsOptions = {
-  origin: 'https://tool-sphere.github.io/',
+  origin: 'https://tool-sphere.github.io',
   optionsSuccessStatus: 200,
 };
 app.get("*", (req, res) => {
