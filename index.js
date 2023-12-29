@@ -5,9 +5,9 @@ const corsOptions = {
   origin: 'https://tool-sphere.github.io/',
   optionsSuccessStatus: 200,
 };
-app.use((req, res, next) => {
+app.get("*", (req, res) => {
   res.send('Request Origin:', req.get('Origin'));
-  next();
+//  next();
 });
 /*app.use(cors(corsOptions));
 //app configuration 
