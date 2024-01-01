@@ -6,7 +6,11 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
-//app configuration 
+app.get("/", async(req, res) => {
+res.send("Nothing To See here 👨🏻‍💻");
+});
+
+
 app.get("*", async(req, res) => {
 res.send("Hii");
 });
