@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const Gradio = require("cjs gradio client.js");
+const Gradio = require("./cjs gradio client.js");
 const app = express();
 const corsOptions = {
   origin: 'https://tool-sphere.github.io',
