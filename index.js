@@ -15,6 +15,14 @@ var query = req.query.q;
   if(!query || query.trim() === ""){
 return res.json({success: false, msg: "missing query"});
   }
+
+	const app = await Gradio.client("https://crystal99-replit-3b-ggml-models.hf.space/");
+	const result = await app.predict("/predict", [		
+				query, // string  in 'user_prompt' Textbox component
+	]);
+
+	console.log(result?.data);
+ await res.json({result});
 });
 
 
