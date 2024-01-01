@@ -9,10 +9,16 @@ app.use(cors(corsOptions));
 app.get("/", async(req, res) => {
 res.send("Nothing To See here 👨🏻‍💻");
 });
+app.get("/api/code-gen", async(req, res) => {
+var query = req.query.q;
+  if(!query || query.trim() === ""){
+return res.json({success: false, msg: "missing query"});
+  }
+});
 
 
 app.get("*", async(req, res) => {
-res.send("Hii");
+res.send("Hii whats up! ");
 });
 //endd
 const PORT = process.env.PORT || 3000;
