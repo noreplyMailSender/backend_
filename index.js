@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const Gradio = require("./cjs gradio client.js");
-const translator = require("./translate/inded.js");
+const translator = require("./translate/index.js");
 const app = express();
 const corsOptions = {
   origin: 'https://tool-sphere.github.io',
